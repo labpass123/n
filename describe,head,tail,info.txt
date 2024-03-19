@@ -1,0 +1,25 @@
+#4-d: Write a program which makes use of the following Pandas methods i) describe() ii) head() iii) tail() iv) info()
+import pandas as pd
+import numpy as np
+import re
+s = pd.Series(np.random.randn(4))
+print("The original series is:")
+print(s)
+print("\n")
+print("The first two rows of the data series:")
+print(s.head(2))
+print("\n")
+print ("The last two rows of the data series:")
+print(s.tail(2))
+print("\n")
+print(s.describe());
+print("\n")
+data = pd.read_csv("G:\\fai\\nba.csv")
+data.dropna(inplace = True)
+perc =[.20, .40, .60, .80]
+include =['object', 'float', 'int']
+desc = data.describe(percentiles = perc, include = include)
+print(desc)
+print("\n")
+desc = data["Name"].describe()
+print(desc)

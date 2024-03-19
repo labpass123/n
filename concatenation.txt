@@ -1,0 +1,21 @@
+import pandas as pd 
+data1 = {'Name':['Gangotri', 'Karthik', 'Naresh', 'Pravallika'], 
+        'Age':[27, 24, 22, 32], 
+        'Address':['Nagpur', 'Kanpur', 'Allahabad', 'Kannuaj'], 
+        'Qualification':['Msc', 'MA', 'MCA', 'Phd']} 
+data2 = {'Name':['Manoj', 'Varma', 'Kishore', 'Ritesh'], 
+        'Age':[17, 14, 12, 52], 
+        'Address':['Nagpur', 'Kanpur', 'Allahabad', 'Kannuaj'], 
+        'Qualification':['Btech', 'B.A', 'Bcom', 'B.hons']} 
+df = pd.DataFrame(data1)
+df1 = pd.DataFrame(data2)
+print(df, "\n\n", df1) 
+frames = [df, df1]
+res1 = pd.concat(frames)
+print(res1)
+res2 = pd.concat([df, df1], axis=1, join='inner')
+print(res2)
+res = df.append(df1)
+print(res)
+res = df.join(df1)
+print(res)

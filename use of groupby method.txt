@@ -1,0 +1,12 @@
+#6-b: Write a program to demonstrate use of groupby() method.
+import pandas as pd
+data1 = {'Name':['Srinidhi', 'Anu', 'Jagath', 'Sharmila','Bhavana', 'Aditya', 'Mahesh',    'Prabhas'],
+		'Age':[27, 24, 22, 32,33, 36, 27, 32],
+		'Address':['Nagpur', 'Kanpur', 'Allahabad', 'Tekkali','Srikakulam', 'Kanpur', 'Allahabad', 'Palasa'],
+		'Qualification':['Msc', 'MA', 'MCA', 'Phd','B.Tech', 'B.com', 'Msc', 'MA']}
+df = pd.DataFrame(data1)
+print(df)
+df.groupby('Name')
+print(df.groupby('Name').groups)
+df.groupby(['Name', 'Qualification'])
+print(df.groupby(['Name', 'Qualification']).groups)

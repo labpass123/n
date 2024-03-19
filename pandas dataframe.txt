@@ -1,0 +1,9 @@
+#4-c: Creating a Pandas DataFrame.
+import pandas as pd
+lst = ['Java', 'Python', 'C', 'C++','JavaScript', 'Swift', 'Go']
+dframe = pd.DataFrame(lst)  
+print(dframe)
+import pandas as pd  
+data = {'Name': ['Aditya', 'Pravallika', 'Krish', 'John'], 'Age': [20, 21, 19, 18]}
+df = pd.DataFrame(data)
+print(df)  

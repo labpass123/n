@@ -1,0 +1,16 @@
+#5-c: Write a program that demonstrates the row selection, row addition, and row deletion.
+import pandas as pd
+data = pd.read_csv("G:\\fai\\nba.csv", index_col ="Name")
+first = data.loc["Avery Bradley"]
+second = data.loc["R.J. Hunter"]
+print(first, "\n\n\n", second)
+import pandas as pd
+df = pd.read_csv("G:\\fai\\nba.csv", index_col ="Name")
+df.head(10)
+new_row = pd.DataFrame({'Name':'Aditya', 'Team':'Engineering', 'Number':3,'Position':'PG', 'Age':33, 'Height':'6-2','Weight':189, 'College':'AITAM', 'Salary':99999},index =[0])
+df = pd.concat([new_row, df]).reset_index(drop = True)
+df.head(5)
+import pandas as pd
+data = pd.read_csv("G:\\fai\\nba.csv", index_col ="Name" )
+data.drop(["Avery Bradley", "John Holland", "R.J. Hunter","R.J. Hunter"], inplace = True)
+print(data)

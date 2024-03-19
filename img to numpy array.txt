@@ -1,0 +1,7 @@
+#3-b: Convert images to NumPy array
+from PIL import Image
+from numpy import asarray
+img = Image.open('G:\download.jpg')
+numpydata = asarray(img)
+print(type(numpydata))
+print(numpydata.shape)

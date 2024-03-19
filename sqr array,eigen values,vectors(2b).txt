@@ -1,0 +1,6 @@
+import numpy as np
+m=np.array([[1,2],[2,3]])
+print("printing thee orninal square array:\n",m)
+w,v=np.linalg.eig(m)
+print("printing the eigen values of the given square array:\n",w)
+print("printing right eigen vectors of the given square array:\n",v)
